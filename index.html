@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiet Keys — typing soundboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <main class="container">
+    <h1>Quiet Keys</h1>
+    <p class="tagline">turn your typing into vibes</p>
+
+    <div class="controls">
+      <label for="pack">sound pack</label>
+      <select id="pack">
+        <option value="typewriter">typewriter</option>
+        <option value="mechanical">mechanical</option>
+        <option value="laptop">laptop</option>
+        <option value="thocky">thocky</option>
+      </select>
+
+      <label for="volume">volume</label>
+      <input id="volume" type="range" min="0" max="1" step="0.01" value="0.6" />
+
+      <label class="toggle">
+        <input id="spacebar" type="checkbox" checked />
+        include space/enter sounds
+      </label>
+    </div>
+
+    <button id="enableAudio" class="primary">click to enable audio</button>
+
+    <section class="pad" tabindex="0">
+      <p>start typing anywhere on this page.</p>
+      <p class="hint">tip: keep this tab focused.</p>
+    </section>
+
+    <footer>
+      <small>© Quiet Keys — MVP</small>
+    </footer>
+  </main>
+</body>
+</html>
